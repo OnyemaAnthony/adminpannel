@@ -11,7 +11,7 @@ class UserRequestScreen extends StatelessWidget {
         DateTime.now(),
         DateTime.now()),
     UserRequestModel(
-        "Tommy merlin ",
+        "Tommy Wilson ",
         'https://images.unsplash.com/photo-1508908324153-d1a219719814?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60',
         DateTime.now(),
         DateTime.now()),
@@ -80,7 +80,7 @@ class UserRequestScreen extends StatelessWidget {
             UserRequestModel user = users[index];
             return GestureDetector(
               onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (_)=>UserRequestDetailScreen()));
+                Navigator.push(context, MaterialPageRoute(builder: (_)=>UserRequestDetailScreen(user: user,)));
               },
               child: Padding(
                 padding: EdgeInsets.all(10),
