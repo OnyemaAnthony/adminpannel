@@ -1,4 +1,5 @@
-import 'package:admin_panel/user_request_model.dart';
+import 'package:admin_panel/models/user_request_model.dart';
+import 'package:admin_panel/screens/user_request_detail.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
@@ -79,7 +80,7 @@ class UserRequestScreen extends StatelessWidget {
             UserRequestModel user = users[index];
             return GestureDetector(
               onTap: (){
-
+                Navigator.push(context, MaterialPageRoute(builder: (_)=>UserRequestDetailScreen()));
               },
               child: Padding(
                 padding: EdgeInsets.all(10),
